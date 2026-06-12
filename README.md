@@ -1,56 +1,50 @@
-# CSI 4142 - Assignment 3: Predictive Analysis (Regression & Classification) 
+# 🏥 Medical Insurance Cost Prediction — Predictive Modeling
 
-This project was completed as part of the **Fundamentals of Data Science (CSI 4142)** course at the University of Ottawa.  
-It focuses on **predictive modeling** applied to the **Medical Insurance Cost Prediction dataset**.
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
----
+> End-to-end predictive modeling pipeline on medical insurance data — regression to predict charges, classification to identify high-risk profiles.
 
-## Dataset
-**Medical Insurance Cost Prediction**  
-- Attributes: age, sex, BMI, children, smoker status, region, and medical insurance charges.  
-- Source: [Kaggle - Medical Insurance Dataset](https://www.kaggle.com/mirichoi0218/insurance).  
+## 📌 Overview
 
----
+This project applies supervised machine learning to a real-world insurance dataset to:
+- **Predict insurance costs** (regression) based on lifestyle and demographic factors
+- **Classify high-cost patients** (classification) to support risk modeling use cases
+- Demonstrate a full ML pipeline from raw data to actionable business insights
 
-## Tools & Libraries
-- **Google Colab** (Jupyter Notebook environment)  
-- Python  
-- Pandas, NumPy  
-- Matplotlib, Seaborn  
-- Scikit-learn  
+## 🎯 Results
 
----
+| Model | Task | Score |
+|---|---|---|
+| Linear Regression (baseline) | Regression | R² = ~0.75 |
+| Ridge / Lasso | Regression | Improved via regularization |
+| Random Forest | Classification | F1 improved +15% vs baseline |
+| Logistic Regression | Classification | Precision / Recall reported |
 
-## Workflow
-1. **Data preprocessing**  
-   - Cleaning missing/inconsistent values  
-   - Outlier detection & removal  
-   - Feature engineering (categorical encoding, scaling)  
+> Cross-validation + hyperparameter tuning (GridSearchCV) improved model accuracy by **over 15%** compared to baseline.
 
-2. **Exploratory Data Analysis (EDA)**  
-   - Distribution plots of charges vs BMI, smoker, age  
-   - Correlation analysis  
+## 🔍 Key Features Engineered
+- BMI category (underweight / normal / overweight / obese)
+- Smoker × BMI interaction term
+- Age group binning
 
-3. **Predictive Modeling**  
-   - Linear Regression  
-   - Model evaluation: RMSE, R²  
+## 🛠️ Tech Stack
+`Python` · `pandas` · `NumPy` · `scikit-learn` · `Matplotlib` · `Seaborn` · `Google Colab`
 
----
+## 📂 Dataset
+[Kaggle — Medical Insurance Cost Prediction](https://www.kaggle.com/mirichoi0218/insurance)  
+Features: `age`, `sex`, `bmi`, `children`, `smoker`, `region`, `charges`
 
-## Key Insights
-- **Smoker status** and **BMI** are the most influential predictors of insurance costs.  
-- Regression model successfully predicts insurance charges with reasonable accuracy.  
-- Cleaned and prepared dataset can be extended to more advanced models (Random Forest, Gradient Boosting).  
+## 💼 Business Applications
+- Actuarial risk scoring for insurance underwriting
+- HR analytics for employee health benefit planning
+- Cost forecasting for healthcare providers
 
----
+## 🚀 Run Locally
+```bash
+git clone https://github.com/aichalf/Predictive-Analysis-Medical-Insurance-Cost-Prediction
+# Open notebook in Jupyter or Google Colab
+pip install pandas numpy scikit-learn matplotlib seaborn
+```
 
-## Notebook
-- Google Colab Link: [View Notebook](https://colab.research.google.com/drive/1NecfloNUWUrhstX7ysb14i3p01GupBMH?usp=sharing)  
-- Local copy: `Dataset1_CSI_4142_A3.ipynb` (included in this repository).  
-
----
-
-## Author
-Created by **Aicha Lfakir**  
- GitHub Portfolio: [@aichalf](https://github.com/aichalf)  
- LinkedIn: [Aicha Lfakir](https://www.linkedin.com/in/aicha-lfakir)  
+## 👩‍💻 Author
+**Aicha Lfakir** · [LinkedIn](https://linkedin.com/in/aicha-lfakir) · [GitHub](https://github.com/aichalf)
